@@ -1,0 +1,167 @@
+﻿Statistical profiling result from isolate-bloq-v8.log, (1591 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1350   84.9%          C:\Windows\SYSTEM32\ntdll.dll
+    235   14.8%          C:\Program Files\nodejs\node.exe
+      1    0.1%          C:\Windows\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.1%   20.0%  LazyCompile: *normalizeString node:path:66:25
+      1    0.1%   20.0%  Function: ^toNamespacedPath node:path:618:19
+      1    0.1%   20.0%  Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1    0.1%   20.0%  Function: ^dirname node:path:653:10
+      1    0.1%   20.0%  Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:667:38
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      5    0.3%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      6    0.4%  120.0%  GC
+   1586   99.7%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1350   84.9%  C:\Windows\SYSTEM32\ntdll.dll
+
+    235   14.8%  C:\Program Files\nodejs\node.exe
+    205   87.2%    C:\Program Files\nodejs\node.exe
+     69   33.7%      Function: ^compileFunction node:vm:308:25
+     69  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     69  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     67   97.1%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      2    2.9%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     28   13.7%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     20   71.4%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     19   95.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+     19  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    5.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      8   28.6%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      8  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      8  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     14    6.8%      Function: ^realpathSync node:fs:2425:22
+     14  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     14  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     12   85.7%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    7.1%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1    7.1%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+     14    6.8%      Function: ^isatty node:tty:42:16
+      9   64.3%        LazyCompile: ~useColors C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\node_modules\debug\src\node.js:155:19
+      7   77.8%          LazyCompile: ~createDebug C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\node_modules\debug\src\common.js:60:22
+      2   28.6%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\configuration.js:1:1
+      2   28.6%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\appenders\fileSync.js:1:1
+      1   14.3%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\log4js.js:1:1
+      1   14.3%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\layouts.js:1:1
+      1   14.3%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\appenders\index.js:1:1
+      2   22.2%          Function: ^createDebug C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\node_modules\debug\src\common.js:60:22
+      1   50.0%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\categories.js:1:1
+      1   50.0%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\log4js\lib\appenders\recording.js:1:1
+      2   14.3%        LazyCompile: ~useColors C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\streamroller\node_modules\debug\src\node.js:155:19
+      2  100.0%          LazyCompile: ~createDebug C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\streamroller\node_modules\debug\src\common.js:60:22
+      1   50.0%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\streamroller\lib\fileNameFormatter.js:1:1
+      1   50.0%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\streamroller\lib\RollingFileWriteStream.js:1:1
+      2   14.3%        LazyCompile: ~useColors C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\debug\src\node.js:75:19
+      2  100.0%          Function: ^createDebug C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\debug\src\debug.js:63:21
+      2  100.0%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\compression\index.js:1:1
+      1    7.1%        Function: ~<anonymous> C:\Users\pca\Downloads\node_modules\supports-color\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     10    4.9%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      7   70.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   14.3%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1   14.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%          Function: ~<anonymous> node:crypto:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   14.3%          Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3   30.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      3  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     10    4.9%      C:\Program Files\nodejs\node.exe
+      1   10.0%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   10.0%        LazyCompile: ~module.exports.get_best_napi_build_version C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\@mapbox\node-pre-gyp\lib\util\napi.js:187:54
+      1  100.0%          LazyCompile: ~module.exports.validate_package_json C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\@mapbox\node-pre-gyp\lib\util\napi.js:46:48
+      1  100.0%            LazyCompile: ~validate_config C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\@mapbox\node-pre-gyp\lib\util\versioning.js:195:25
+      1   10.0%        LazyCompile: ~formatProperty node:internal/util/inspect:1810:24
+      1  100.0%          LazyCompile: ~formatRaw node:internal/util/inspect:820:19
+      1  100.0%            LazyCompile: ~formatValue node:internal/util/inspect:745:21
+      1   10.0%        LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      1  100.0%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   10.0%        Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\application.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1   10.0%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   10.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1   10.0%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1   10.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   10.0%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^allocate node:buffer:398:18
+      6    2.9%      LazyCompile: ~isatty node:tty:42:16
+      6  100.0%        LazyCompile: ~useColors C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\debug\src\node.js:75:19
+      6  100.0%          LazyCompile: ~createDebug C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\debug\src\debug.js:63:21
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\view.js:1:1
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\router\route.js:1:1
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\router\layer.js:1:1
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\router\index.js:1:1
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\express\lib\application.js:1:1
+      1   16.7%            Function: ~<anonymous> C:\Users\pca\Downloads\Sublime Text 3\las clases\backend\logs-debug\node_modules\body-parser\lib\types\raw.js:1:1
+      6    2.9%      LazyCompile: ~Resolver node:internal/dns/utils:53:14
+      6  100.0%        Function: ~<anonymous> node:internal/dns/utils:1:1
+      6  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      6    2.9%      Function: ^read node:internal/modules/package_json_reader:16:14
+      6  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      5   83.3%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      5  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   16.7%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5    2.4%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   20.0%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   20.0%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   20.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   20.0%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   20.0%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    1.5%      Function: ^readSync node:fs:684:18
+      3  100.0%        Function: ^tryReadSync node:fs:429:21
+      3  100.0%          Function: ^readFileSync node:fs:450:22
+      2   66.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1   33.3%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+
